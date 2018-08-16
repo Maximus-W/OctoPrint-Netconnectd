@@ -2,6 +2,8 @@ $(function() {
     function NetconnectdViewModel(parameters) {
         var self = this;
 
+        self.loadingVisible = ko.observable(false);
+
         self.loginState = parameters[0];
         self.settingsViewModel = parameters[1];
 
@@ -190,6 +192,7 @@ $(function() {
         };
 
         self.confirmWifiConfiguration = function() {
+            self.loadingVisible(false);
             self.sendWifiConfig(self.editorWifiSsid(), self.editorWifiPassphrase1(), function() {
                 self.editorWifi = undefined;
                 self.editorWifiSsid(undefined);
