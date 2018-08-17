@@ -1,8 +1,4 @@
 <div id="settings_plugin_netconnectd_dialog" data-bind="allowBindings: true">
-    <p>
-        <strong>{{ _('Connection state') }}:</strong> <span data-bind="text: connectionStateText"></span>
-    </p>
-
     <div class="pull-right" data-bind="visible: enableQualitySorting">
         <small>
             {{ _('Sort by') }}: <a href="#" data-bind="click: function() { listHelper.changeSorting('ssid'); }">{{ _('SSID') }} ({{ _('ascending') }})</a> | <a href="#" data-bind="click: function() { listHelper.changeSorting('quality'); }">{{ _('Quality') }} ({{ _('descending') }})</a>
@@ -87,7 +83,7 @@
     </div>
 </div>
 
-<div class="loadingOverlay" data-bind="visible: $root.loadingVisible">
+<div id="loadingOverlay" data-bind="visible: $root.loadingVisible">
 	<div id="progressbar">
 		<span id="loading"></span>
 		<div id="load">Rebooting Canvas Hub</div>
