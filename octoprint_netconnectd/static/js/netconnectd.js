@@ -192,6 +192,7 @@ $(function() {
         };
 
         self.confirmWifiConfiguration = function() {
+            $("#settings_plugin_netconnectd_wificonfig").modal("hide");
             self.loadingVisible(true);
             self.sendWifiConfig(self.editorWifiSsid(), self.editorWifiPassphrase1(), function() {
                 self.editorWifi = undefined;
