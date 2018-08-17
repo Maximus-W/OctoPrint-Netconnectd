@@ -192,7 +192,7 @@ $(function() {
         };
 
         self.confirmWifiConfiguration = function() {
-            self.loadingVisible(false);
+            self.loadingVisible(true);
             self.sendWifiConfig(self.editorWifiSsid(), self.editorWifiPassphrase1(), function() {
                 self.editorWifi = undefined;
                 self.editorWifiSsid(undefined);
